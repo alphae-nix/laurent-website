@@ -10,7 +10,7 @@ import { TwitterIcon } from "./icons/TwitterIcon";
 
 export const Header = () => {
   return (
-    <header className="sticky top-0 py-4 mb-16">
+    <header className="sticky top-0 py-4 mb-16 backdrop-blur-md">
       <Section className="flex items-baseline">
         <h1 className="text-lg font-bold"> Laurent Delatte</h1>
         <div className="flex-1" />
