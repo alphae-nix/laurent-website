@@ -3,18 +3,8 @@ import { Section } from "./Section";
 import { cn } from "@/lib/utils";
 import { TwitterIcon } from "./icons/TwitterIcon";
 import Link from "next/link";
-
-const Code = ({ className, ...props }: ComponentPropsWithoutRef<"span">) => {
-  return (
-    <span
-      className={cn(
-        className,
-        "bg-accent/30 hover:bg-accent/50 transition-colors font-mono border-accent px-1 py-0.5 rounded-xl text-primary"
-      )}
-      {...props}
-    ></span>
-  );
-};
+import { Button } from "@/components/ui/button";
+import { Code } from "./Code";
 
 export const Hero = () => {
   return (
@@ -25,27 +15,45 @@ export const Hero = () => {
         </h2>
         <h3 className="text-3xl font-caption"> Software Developer </h3>
         <p className="text-base">
-          Lorem ipsum dolor
-          <Link href="https://laurent.delatte.ovh">
-            <Code className="inline-flex items-center gap-1 border">
-              {" "}
-              <TwitterIcon size={16} className="inline h-auto" />
-              Twitter
-            </Code>
-          </Link>
-          <Code className="inline-flex items-center gap-1 border">
-            {" "}
-            <img
-              style={{ width: 16, height: "auto" }}
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_France_%281794%E2%80%931815%2C_1830%E2%80%931974%2C_2020%E2%80%93present%29.svg/2560px-Flag_of_France_%281794%E2%80%931815%2C_1830%E2%80%931974%2C_2020%E2%80%93present%29.svg.png"
-              alt="France flag"
-            />
-            France
-          </Code>
-          sit amet consectetur adipisicing elit. Labore quas voluptas dolore hic
-          possimus officiis sapiente, assumenda fuga perferendis ut culpa
-          dignissimos aut deserunt eum nisi. Dolore alias excepturi aliquam!
-        </p>
+          Hey 👋, I'm Laurent, a passionate developer from France 🇫🇷. I'm always
+          eager to learn new things and explore the world. Feel free to reach
+          out!
+        </p>{" "}
+        <div className="flex justify-center space-x-4">
+          <a href="/CV Laurent Delatte.pdf" download="CV Laurent Delatte.pdf">
+            <Button className="text-current bg-inherit border bg-zinc-900 hover:bg-black w-fit">
+              <svg
+                className="w-3.5 h-3.5 me-2.5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z" />
+                <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" />
+              </svg>{" "}
+              Download my CV{" "}
+            </Button>
+          </a>
+          <a
+            href="/public_key.asc"
+            download="Laurent_Delatte_PGP_Public_Key.asc"
+          >
+            <Button className="text-current bg-inherit border bg-zinc-900 hover:bg-black w-fit">
+              <svg
+                className="w-3.5 h-3.5 me-2.5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z" />
+                <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" />
+              </svg>{" "}
+              PGP Key
+            </Button>
+          </a>
+        </div>
       </div>
       <div className="flex-1 max-lg:m-auto ml-auto">
         <img

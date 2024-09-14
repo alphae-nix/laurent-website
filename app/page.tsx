@@ -5,7 +5,7 @@ import { Status } from "./_components/Status";
 export default function Home() {
   return (
   <main>
-    {/* Header */}
+    <link rel="icon" href="/img/favicon.ico" />
     <Header></Header>
     <Hero></Hero>
     <Status></Status>

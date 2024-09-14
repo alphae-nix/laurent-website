@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { MastodonIcon } from "./icons/MastodonIcon";
 import { LinkedinIcon } from "./icons/LinkedinIcon";
 import { TwitterIcon } from "./icons/TwitterIcon";
+import { MailIcon } from "./icons/MailIcon";
 
 export const Header = () => {
   return (
@@ -26,21 +27,27 @@ export const Header = () => {
           </Link>
           <Link
             className={cn(buttonVariants({ variant: "outline" }), "size-6 p-0 rounded-full")}
-            href="https://github.com/alphae-nix"
+            href="https://mamot.fr/@alphanix"
           >
             <MastodonIcon size={12} className="text-foreground" />
           </Link>
           <Link
             className={cn(buttonVariants({ variant: "outline" }), "size-6 p-0 rounded-full")}
-            href="https://mamot.fr/@alphanix"
+            href="https://www.linkedin.com/in/laurent-delatte/"
           >
             <LinkedinIcon size={12} className="text-foreground" />
           </Link>
           <Link
             className={cn(buttonVariants({ variant: "outline" }), "size-6 p-0 rounded-full")}
-            href="https://github.com/alphae-nix"
+            href="https://x.com/Alphanix_lib"
           >
             <TwitterIcon size={12} className="text-foreground" />
+          </Link>
+          <Link
+            className={cn(buttonVariants({ variant: "outline" }), "size-6 p-0 rounded-full")}
+            href="mailto:18laurent@gmail.com"
+          >
+            <MailIcon size={18} className="text-foreground"/>
           </Link>
         </ul>
       </Section>
