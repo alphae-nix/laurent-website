@@ -2,7 +2,7 @@ import {Card} from "@/components/ui/card";
 import {Code} from "./Code";
 import Image from "next/image";
 import Link from "next/link";
-import {BugOff, LucideIcon, Shield, Globe, Wallet, Joystick, Skull, GraduationCap} from "lucide-react";
+import {BugOff, LucideIcon, Shield, Globe, Wallet, Joystick, Skull} from "lucide-react";
 
 const SIDE_PROJECTS = [
     {
@@ -59,15 +59,38 @@ type SideProjectProps = {
 const SideProject = (props: SideProjectProps) => {
     return (
         <Link className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors" href={props.url}>
-  <span className="bg-accent text-accent-foreground p-2 rounded-sm">
+  <span className="bg-accent text-accent-foreground p-2 rounded-lg">
     <props.Logo/>
   </span>
             <div>
                 <p className="text-lg font-semibold">{props.title}</p>
-                <p className="text-sm text-muted-foreground">{props.description}</p>
+                <p className="text-sm text-foreground/50">{props.description}</p>
             </div>
         </Link>);
 };
+
+
+type EducationProps = {
+    image: string;
+    title: string;
+    role: string;
+    url: string;
+    date: string;
+};
+const Education = (props: EducationProps) => {
+    return (
+        <Link className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors" href={props.url}>
+            <img src={props.image} alt={props.title} className={"w-12 h-12 object-contain"}/>
+            <div>
+                <p className="text-lg font-semibold">{props.title}</p>
+                <p className="text-sm text-foreground/50">{props.role}</p>
+            </div>
+            <div className={"ml-auto"}>
+                <p className="text-sm text-foreground/50">{props.date}</p>
+            </div>
+        </Link>);
+};
+
 
 export const Status = () => {
     return (
@@ -231,7 +254,8 @@ export const Status = () => {
                     <li className="mb-10 ms-6">
             <span
                 className="absolute flex items-center justify-center w-6 h-6 bg-white rounded-full -start-3 dark:ring-gray-900 dark:bg-blue-900 p-0.5">
-              <img src="https://seekvectorlogo.com/wp-content/uploads/2019/08/intact-insurance-vector-logo.png"/>
+                <Image src="https://seekvectorlogo.com/wp-content/uploads/2019/08/intact-insurance-vector-logo.png"
+                       alt="Intact logo" width={16} height={16}/>
             </span>
                         <h3 className="mb-1 text-lg font-semibold ">
                             Gap year: Fullstack Developer
@@ -399,7 +423,7 @@ export const Status = () => {
                                 clusters
                             </li>
                             <li>
-                                • Implemented GitOps "app to apps" approach with{" "}
+                                • Implemented GitOps app to apps approach with{" "}
                                 <Code>
                                     <a href="">
                                         <Image
@@ -476,11 +500,13 @@ export const Status = () => {
                 <Card className="p-8">
                     <h3 className="text-3xl font-caption "> Educations </h3>
                     <div className={"flex flex-col gap-4"}>
-                        <SideProject title={"ESIEE Paris"} description="Computer Science" url="https://www.esiee.fr/"
-                                     Logo={GraduationCap}/>
-                        <SideProject title={"Heriot Watt Scotland "} description="Student Semester Exchange - Computer Science"
-                                     url=" https://www.hw.ac.uk/"
-                                     Logo={GraduationCap}/>
+                        <Education title={"ESIEE Paris"} role="Msc: Computer Science" url="https://www.esiee.fr/"
+                                   image={"https://www.esiee.fr/typo3conf/ext/esiee_sitepackage/Resources/Public/imgs/svg/logo-esiee.svg"}
+                                   date={"2018 - 2024"}/>
+                        <Education title={"Heriot Watt Scotland "} role="Student Semester Exchange - Computer Science"
+                                   url=" https://www.hw.ac.uk/"
+                                   image={"https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Heriot-Watt_University_logo.svg/2560px-Heriot-Watt_University_logo.svg.png"}
+                                   date={"2023"}/>
                     </div>
                 </Card>
             </div>
