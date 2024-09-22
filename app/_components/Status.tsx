@@ -9,7 +9,7 @@ const SIDE_PROJECTS = [
         Logo: Globe,
         title: "Portfolio Website",
         description: "Creation of a personal portfolio website to showcase my projects and experiences",
-        url: "https://laurent.delatte.ovh",
+        url: "https://github.com/alphae-nix/laurent-website",
     },
     {
         Logo: BugOff,
