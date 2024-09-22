@@ -11,7 +11,7 @@ export const Hero = () => {
                 </h2>
                 <h3 className="text-3xl font-caption"> Software Developer </h3>
                 <p className="text-base">
-                    Hey 👋, I&apos;m Laurent, a passionate developer from France 🇫🇷. I&apos;m alway
+                    Hey 👋, I&apos;m Laurent, a passionate developer from France 🇫🇷. I&apos;m always
                     eager to learn new things and explore the world. Feel free to reach
                     out!
                 </p>
