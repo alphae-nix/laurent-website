@@ -5,6 +5,8 @@ WORKDIR /app
 
 RUN npm install -g pnpm
 
+ENV NODE_ENV=production
+
 COPY package.json pnpm-lock.yaml ./
 
 RUN pnpm install --frozen-lockfile
