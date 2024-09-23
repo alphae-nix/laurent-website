@@ -11,7 +11,7 @@ const AnekTelugu = Anek_Telugu({
 });
 export const metadata: Metadata = {
   title: "Laurent Delatte - Software Engineer",
-  description: "Web creator specialized in Typescript and Laravel",
+  description: " French Developer, passionate about software development and open-source.",
 };
 
 export default function RootLayout({
