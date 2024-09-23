@@ -500,7 +500,7 @@ export const Status = () => {
                 <Card className="p-8">
                     <h3 className="text-3xl font-caption "> Educations </h3>
                     <div className={"flex flex-col gap-4"}>
-                        <Education title={"ESIEE Paris"} role="Msc: Computer Science" url="https://www.esiee.fr/"
+                        <Education title={"ESIEE Paris"} role="MSc: Computer Science" url="https://www.esiee.fr/"
                                    image={"https://www.esiee.fr/typo3conf/ext/esiee_sitepackage/Resources/Public/imgs/svg/logo-esiee.svg"}
                                    date={"2018 - 2024"}/>
                         <Education title={"Heriot Watt Scotland "} role="Student Semester Exchange - Computer Science"
